@@ -42,71 +42,71 @@ public class Rental {
     public static class GarageTester{
        
         public String getExample(){
-            Truck tr = new Truck();
-            tr.Color = "Black";
-            tr.hastrailer = false;
+            Truck Tr = new Truck();
+            Tr.Color = "Green";
+            Tr.Trailer = false;
            
             Garage gr = new Garage();
-            return gr.setVehicle(tr);
+            return gr.setVehicle(Tr);
         }
     }
     public static class Customer{
        
-        String name = "Bob";
-        String address = "Entebbe";
+        String name = "Edwins";
+        String address = "Kampala";
    
     }
    
-    public static class CarRentalContract{
+    public static class Rentalcontract{
         Customer cm = new Customer();
-        Vehicle vh = new Car();
+        Vehicle V = new Car();
        
-        CarRentalContract(String name,String address){
+        Rentalcontract(String name,String address){
             cm.name = name;
             cm.address = address;
         }
        
        
-        public String toString(){//overriding the toString() method  
-           return cm.name+" : "+vh.toString();  
+        public String toString(){
+           return cm.name+" : "+V.toString();  
         }
     }
     public static class CarRental{
         String carArray[] = new String[20];
        
-        void addContract(CarRentalContract c1){
-            for(int i=0; i<carArray.length; i++){
-                carArray[i] = c1.toString();
+        void addContract(Rentalcontract c1){
+            for(int x=0; x<carArray.length; x++){
+                cararray[x] = c1.toString();
             }
         }
        
         String displayContracts(){
            
-            for (String a : carArray){
+            for (String a : cararray){
                
                 return a;
             }
            
-            return "No Car Rental Contracts";
+            return "No rental contracts";
         }
     }
    
     public static void main(String[] args) {
        
-        //my test cases
-        Car mycar = new Car();
-        System.out.println("My car instance: "+mycar.toString());
+        //Test cases
+        Car ca = new Car();
+        System.out.println("My car instance: "+ca.toString());
        
-        Truck mytruck = new Truck();
-        System.out.println("My truck instance: "+mytruck.toString());
+        Truck tru = new Truck();
+        System.out.println("My truck instance: "+tru.toString());
        
-        GarageTester gt = new GarageTester();
-        System.out.println("Garage Tester: "+gt.getExample());
+        GarageTester g = new GarageTester();
+        System.out.println("Garage Tester: "+g.getExample());
          
-        CarRentalContract cc2 = new CarRentalContract("jim jones","Wakiso");    
+        Rentalcontract RC = new Rentalcontract("Akello","Mukono");    
         CarRental cr = new CarRental();
 
-        cr.addContract(cc2);
+        cr.addContract(RC);
         System.out.println("My Contracts:"+cr.displayContracts());
     }
    
