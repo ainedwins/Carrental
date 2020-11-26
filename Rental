@@ -3,13 +3,13 @@ package Carental;
 public class Rental {
 
     public class Vehicle{
-        String Color = "Silver";
+        String Colour = "Silver";
        
-        public String getColor(){
-            return Color;
+        public String getColour(){
+            return Colour;
         }
         public String toString(){
-            return "Vehicle's colour is "+Color;  
+            return "Vehicle's colour is "+Colour;  
        }
     }
    
@@ -17,13 +17,13 @@ public class Rental {
         boolean wintertires = false;
 
         public String toString(){//overriding the toString() method  
-            return "Vehicle's colour is "+Color+", and has winter tires:"+wintertires;  
+            return "Vehicle's colour is "+Colour+", and has winter tires:"+wintertires;  
        }
     }
     public static class Truck extends Vehicle{
        boolean Trailer = false;
         public String toString(){
-           return "Vehicle's colour is "+Color+", and has a trailer:"+Trailer;  
+           return "Vehicle's colour is "+Colour+", and has a trailer:"+Trailer;  
         }
     }
     public static class Garage{
@@ -43,7 +43,7 @@ public class Rental {
        
         public String getExample(){
             Truck Tr = new Truck();
-            Tr.Color = "Green";
+            Tr.Colour = "Green";
             Tr.Trailer = false;
            
             Garage gr = new Garage();
@@ -66,7 +66,6 @@ public class Rental {
             cm.address = address;
         }
        
-       
         public String toString(){
            return cm.name+" : "+V.toString();  
         }
@@ -83,7 +82,6 @@ public class Rental {
         String displayContracts(){
            
             for (String a : cararray){
-               
                 return a;
             }
            
